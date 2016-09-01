@@ -1,6 +1,13 @@
-frontend-nanodegree-arcade-game
-===============================
+## How to run the game
+This game can be played standalone by opening the index.html file in a browser.  It can also be hosted on a web server if additional functionalities requiring interactions with backend server are needed.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## How to play the game
+The game can be played using the **left**, **right**, **up**, **down**, arrow keys on the keyboard. **Left** arrow key will move the player to the left. **Right** arrow key will move the player to the right. **Up** arrow key will move the player up. **Down** arrow key will move the player down.  The game is won when the player has reached the water.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+The player scores one point when crossing over to the water.  The points accumulate in the web session.  When a collision with one of the enemy bugs occurs, the score will be decremented by one.
+
+The pause button will pause the game in progress.  The start button will restart the game that was paused previously.
+
+
+
+

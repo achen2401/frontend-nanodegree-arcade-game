@@ -29,6 +29,8 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
+    var requestID;
+
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
@@ -56,7 +58,7 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-        win.requestAnimationFrame(main);
+        requestID = win.requestAnimationFrame(main);
     }
 
     /* This function does some initial setup that should only occur once,
@@ -160,6 +162,7 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
+        window.cancelAnimationFrame(requestID);
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -180,4 +183,6 @@ var Engine = (function(global) {
      * from within their app.js files.
      */
     global.ctx = ctx;
+    global.resetCanvas = reset;
+    global.initCanvas = init;
 })(this);
