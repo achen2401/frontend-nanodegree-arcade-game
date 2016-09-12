@@ -57,7 +57,7 @@ Enemy.prototype.update = function(dt) {
     // all computers
     var tick = dt*1000;
     if (this.xPos < gameBoard.width) this.xPos = this.xPos + dt * this.speed;
-    else this.xPos = 0;
+    else this.xPos = -100 + dt * this.speed;
 };
 
 /**
@@ -266,7 +266,9 @@ document.body.appendChild(messageDiv);
 var footerDiv = document.createElement('div');
 footerDiv.setAttribute('id', 'footerContainer');
 document.body.appendChild(footerDiv);
-document.getElementById('footerContainer').innerHTML = '<input id="pauseButton" type="button" value="Pause" onclick="toggleButton(this)"/><input id="startButton" disabled="true" type="button" value="Start" onclick="toggleButton(this)"/>';
+
+var infoContent = 'In this game you have a Player and Enemies (Bugs).\n The goal of the player is to reach the water, without colliding into any one of the enemies.\n The player can move left, right, up and down via the corresponding arrow keys on the keyboard.\nThe enemies move in varying speeds on the paved block portion of the scene.\nOnce a the player collides with an enemy, the game is reset and the player moves back to the start square.\nOnce the player reaches the water the game is won.\nOne point is awarded each time the player wins in this session.'
+document.getElementById('footerContainer').innerHTML = '<input id="pauseButton" type="button" value="Pause" onclick="toggleButton(this)"/><input id="startButton" disabled="true" type="button" value="Start" onclick="toggleButton(this)"/><div class="howTo" title="How to play the game" onclick="alert(infoContent);">?</div>';
 
 
 

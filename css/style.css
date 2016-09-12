@@ -10,3 +10,14 @@ body {
 input[type=button]:hover {
     cursor: pointer;
 }
+
+.howTo {
+    margin: 0 .6em;
+    display: inline-block;
+    opacity: 0.8;
+    cursor: pointer;
+    width: 1%;
+    background-color: #A5938C;
+    border-radius: 16px;
+    color: #FFF;
+}
